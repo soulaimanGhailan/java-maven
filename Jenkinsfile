@@ -3,7 +3,7 @@ pipeline {
     tools {
         maven "maven-3.9"
     }
-    // stages {
+    stages {
     //     stage('Checkout') {
     //         steps {
     //             // clean the directory
