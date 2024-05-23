@@ -1,15 +1,17 @@
 pipeline {
     agent any
-
-    stages {
-        stage('Checkout') {
-            steps {
-                // clean the directory
-                sh "rm -rf *"
-                // Checkout the Git repository
-                sh "git clone https://github.com/soulaimanGhailan/java-maven"
-            }
-        }
+    tools {
+        maven "maven-3.9"
+    }
+    // stages {
+    //     stage('Checkout') {
+    //         steps {
+    //             // clean the directory
+    //             sh "rm -rf *"
+    //             // Checkout the Git repository
+    //             sh "git clone https://github.com/soulaimanGhailan/java-maven"
+    //         }
+    //     }
         stage('Build') {
             steps {
                 // Here, we can can run Maven commands
